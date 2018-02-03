@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
-import { Button } from 'reactstrap';
+//import { Button } from 'reactstrap';
 
 /*
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
 export default (props) => {
 	return (
 		<h1>Koohii Onegai <strong>Byelingual</strong></h1>
-	<Button color="danger"> Danger!</Button>
+
 );
 
 }
