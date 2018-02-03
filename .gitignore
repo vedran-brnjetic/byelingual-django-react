@@ -13,6 +13,8 @@ tests/.coverage
 build/
 tests/report/
 
+django_project/settings.py
+
 .DS_STORE
 node_modules
 *~
