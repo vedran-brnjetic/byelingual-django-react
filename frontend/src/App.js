@@ -23,6 +23,7 @@ class App extends Component {
 
 export default (props) => {
 	return (
+		<h1>Koohii Onegai <strong>Byelingual</strong></h1>
 	<Button color="danger"> Danger!</Button>
 );
 
