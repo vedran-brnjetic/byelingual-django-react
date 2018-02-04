@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
+
 class HeaderMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +31,7 @@ class HeaderMenu extends React.Component {
     return (
       <div>
         <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/">Bye Lingual by Koohii Onegai</NavbarBrand>
+          <NavbarBrand href="/"><h3 className="navbar-title">Bye Lingual by <em>Koohii Onegai</em></h3></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
