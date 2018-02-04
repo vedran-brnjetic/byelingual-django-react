@@ -36,30 +36,34 @@ class HeaderMenu extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                <NavLink href="/download/">Download</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Stories
                 </DropdownToggle>
                 <DropdownMenu >
                   <DropdownItem>
-                    Option 1
+                    Story 1
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    Story 2
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    Bundles
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/stories/">Koohii Onegai</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/vedran-brnjetic/Byelingual/">GitHub</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
+
         </Navbar>
       </div>
     );
