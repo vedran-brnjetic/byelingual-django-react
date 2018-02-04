@@ -30,7 +30,7 @@ class HeaderMenu extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md">
+        <Navbar className="top-navbar" color="faded" light expand="md">
           <NavbarBrand href="/"><h3 className="navbar-title">Bye Lingual by <em>Koohii Onegai</em></h3></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
