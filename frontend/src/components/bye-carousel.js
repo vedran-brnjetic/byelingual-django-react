@@ -9,17 +9,17 @@ import {
 
 const items = [
 {
-    src: 'https://media.gettyimages.com/photos/brown-old-paper-picture-id519553256',
+    src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
     altText: 'ByeLingual Software',
     caption: 'ByeLingual Software'
   },
   {
-    src: 'http://byelingual.me:8000/media/story_images/Byelingual1.jpg',
+    src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
     altText: 'Cabin in The Woods',
     caption: 'Cabin in The Woods'
   },
   {
-    src: 'https://media.gettyimages.com/photos/brown-old-paper-picture-id519553256',
+    src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
     altText: 'Slide 3',
     caption: 'Story 3'
   }
