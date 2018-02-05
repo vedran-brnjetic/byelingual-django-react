@@ -10,18 +10,18 @@ import {
 const items = [
 {
     src: 'https://media.gettyimages.com/photos/brown-old-paper-picture-id519553256',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    altText: 'Bye Lingual Software',
+    caption: 'Bye Lingual Software'
   },
   {
-    src: 'https://media.gettyimages.com/photos/brown-old-paper-picture-id519553256',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: 'http://byelingual.me:8000/media/story_images/Byelingual1.jpg',
+    altText: 'Cabin in The Woods',
+    caption: 'Cabin in The Woods'
   },
   {
     src: 'https://media.gettyimages.com/photos/brown-old-paper-picture-id519553256',
     altText: 'Slide 3',
-    caption: 'Slide 3'
+    caption: 'Story 3'
   }
 ];
 
@@ -66,14 +66,15 @@ class ByeCarousel extends Component {
     const { activeIndex } = this.state;
     const imgStyle = {
         width:'100%',
-        height:'auto'
+        height:'60%',
+        
     }
     const slides = items.map((item) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
+          key={item.caption}
         >
           <img style={imgStyle} src={item.src} alt={item.altText} />
           <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
