@@ -31,7 +31,7 @@ class HeaderMenu extends React.Component {
     return (
       <div>
         <Navbar className="top-navbar" color="faded" light expand="md">
-          <NavbarBrand href="/"><h3 className="navbar-title">Bye Lingual by <em>Koohii Onegai</em></h3></NavbarBrand>
+          <NavbarBrand href="/"><h3 className="navbar-title">ByeLingual by <em>Koohii Onegai</em></h3></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

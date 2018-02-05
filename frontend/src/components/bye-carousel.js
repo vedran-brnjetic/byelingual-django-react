@@ -10,8 +10,8 @@ import {
 const items = [
 {
     src: 'https://media.gettyimages.com/photos/brown-old-paper-picture-id519553256',
-    altText: 'Bye Lingual Software',
-    caption: 'Bye Lingual Software'
+    altText: 'ByeLingual Software',
+    caption: 'ByeLingual Software'
   },
   {
     src: 'http://byelingual.me:8000/media/story_images/Byelingual1.jpg',
@@ -67,7 +67,7 @@ class ByeCarousel extends Component {
     const imgStyle = {
         width:'100%',
         height:'60%',
-        
+
     }
     const slides = items.map((item) => {
       return (
@@ -98,4 +98,3 @@ class ByeCarousel extends Component {
 }
 
 export default ByeCarousel;
-
