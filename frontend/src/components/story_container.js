@@ -49,8 +49,8 @@ class StoryContainer extends Component
 		    	<CardDeck className="col-md-12">
 		    		{
 		    			stories.map(
-		    				story => (
-      						<Card key={story.name}>
+		    				(story, index) => (
+      						<Card key={story.name} id={"story"+(index+1)}>
         						<CardImg top width="100%" src={ "http://byelingual.me:8000/media/" + story.image } alt={ story.description } />
         						<CardBody>
           						<CardTitle>{ story.name }</CardTitle>

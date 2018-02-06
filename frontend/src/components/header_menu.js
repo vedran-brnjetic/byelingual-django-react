@@ -44,10 +44,14 @@ class HeaderMenu extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu >
                   <DropdownItem>
-                    Cabin in the Woods
+		    <NavLink href="#story1">
+                    	Cabin in the Woods
+		    </NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    Yojijukugo
+		    <NavLink href="#story2">
+                    	Yojijukugo
+		    </NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
