@@ -10,8 +10,8 @@ import {
 const items = [
 {
     src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
-    altText: 'ByeLingual Software',
-    caption: 'ByeLingual Software'
+    altText: 'Byelingual Game Platform',
+    caption: 'Byelingual Game Platform'
   },
   {
     src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
