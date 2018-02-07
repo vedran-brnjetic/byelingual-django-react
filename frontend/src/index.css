@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
 body {
   margin: 0;
   padding: 0;
@@ -14,6 +16,12 @@ body {
   box-shadow: 0px 2px 5px black;
 }
 
-#carousel {
-  margin-bottom: 2%;
+.carousel-text {
+    font-family: 'Dancing Script', cursive;
+    color: rebeccapurple !important;
+
+}
+
+.carousel-caption h3{
+  font-size: 4.4rem;
 }

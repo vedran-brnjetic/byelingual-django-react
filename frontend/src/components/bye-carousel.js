@@ -11,17 +11,20 @@ const items = [
 {
     src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
     altText: 'Byelingual Game Platform',
-    caption: 'Byelingual Game Platform'
+    caption: 'Byelingual',
+    description: 'Game platform'
   },
   {
     src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
     altText: 'Cabin in The Woods',
-    caption: 'Cabin in The Woods'
+    caption: 'Cabin in the Woods',
+    description: 'A story by Sontra Samela'
   },
   {
     src: 'http://www.timelinecoverbanner.com/facebook-covers/2012/01/old-paper-vintage.jpg',
-    altText: 'Slide 3',
-    caption: 'Story 3'
+    altText: 'Yojijukugo',
+    caption: 'Yojijukugo',
+    description: 'A story by Sontra Samela'
   }
 ];
 
@@ -71,13 +74,13 @@ class ByeCarousel extends Component {
     }
     const slides = items.map((item) => {
       return (
-        <CarouselItem
+        <CarouselItem className="carousel-text"
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.caption}
         >
           <img style={imgStyle} src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <CarouselCaption className="carousel-text" captionText={item.description} captionHeader={item.caption} />
         </CarouselItem>
       );
     });
