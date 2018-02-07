@@ -14,7 +14,7 @@ class Story(models.Model):
     class Meta:
 	verbose_name_plural = "stories"
 
-class Player(moodels.Model):
+class Player(models.Model):
     user = models.OneToOneField( User.id, on_delete=models.CASCADE)
     avatar = models.ImageField(upload_to='player_profiles', default='NoProfileImage.jpg')
     public_name = models.CharField(max_length=30, default='user_public_name')
