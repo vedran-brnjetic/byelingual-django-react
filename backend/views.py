@@ -11,7 +11,7 @@ def index(request):
 
 def userList(request):
     query = User.objects.all().select_related('player')
-    results = serializers.serialize("json", query, fields=('first_name','email','nickname','avatar','language'))
+    results = serializers.serialize("json", dict(query), fields=('first_name','email','nickname','avatar','language'))
     return (JsonResponse(results))
 
 def storyList(request):
