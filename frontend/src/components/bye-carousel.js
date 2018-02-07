@@ -83,7 +83,8 @@ class ByeCarousel extends Component {
     });
 
     return (
-      <Carousel
+      <div>
+      <Carousel id="carousel"
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
@@ -93,6 +94,9 @@ class ByeCarousel extends Component {
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
       </Carousel>
+      <hr />
+
+      </div>
     );
   }
 }

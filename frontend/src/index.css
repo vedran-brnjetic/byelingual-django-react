@@ -13,3 +13,7 @@ body {
   border-bottom: 1px solid green;
   box-shadow: 0px 2px 5px black;
 }
+
+#carousel {
+  margin-bottom: 2%;
+}
