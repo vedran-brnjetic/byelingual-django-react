@@ -10,7 +10,8 @@ def index(request):
     return (HttpResponse("<h1>Koohii Onegai <b> ByeLingual</b></h1>"))
 
 def userList(request):
-    results = dict(users=list(User.objects.all().select_related('player')))
+    query = User.objects.all().select_related('player')
+    results = serializers.serialize("json", query, fields=('first_name','email','nickname','avatar','language'))
     return (JsonResponse(results))
 
 def storyList(request):
