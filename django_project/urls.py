@@ -15,15 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.auth.models import User
 from backend import views
 from django.conf import settings
 
 urlpatterns = [
    url(r'^$', views.index, name='index'),
+   url(r'^api-auth/', include('rest_framework.urls')),
    url(r'^admin/', include(admin.site.urls)),
+   url(r'^stories/', views.storyList, name='storyList'),
    url(r'^users/', views.userList, name='userList'),
    url(r'^authors/', views.authorList, name='authorList'),
-   url(r'^stories/', views.storyList, name='storyList'),
 url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
         'document_root': settings.MEDIA_ROOT})
 

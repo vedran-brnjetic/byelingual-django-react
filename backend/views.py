@@ -17,4 +17,5 @@ def storyList(request):
     return (JsonResponse(results))
 
 def authorList(request):
-    results = dict(authors=list(Player.objects.values('public_name','language','avatar','user__email','authorBiography').get(isAuthor=true)))
+    results = dict(authors=list(Player.objects.filter(isAuthor=True).values('public_name','language','avatar','user__email','authorBiography')))
+    return (JsonResponse(results))
