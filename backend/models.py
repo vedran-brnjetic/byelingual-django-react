@@ -32,3 +32,6 @@ def create_player_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_player_profile(sender, instance, **kwargs):
     instance.player.save
+
+def __str__(self):
+    return self.public_name
