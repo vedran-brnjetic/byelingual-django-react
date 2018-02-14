@@ -20,15 +20,15 @@ from backend import views
 from django.conf import settings
 
 urlpatterns = [
-   url(r'^$', views.index, name='index'),
-   url(r'^api-auth/', include('rest_framework.urls')),
-   url(r'^admin/', include(admin.site.urls)),
-   url(r'^stories/$', views.storyList, name='storyList'),
-   url(r'^users/$', views.userList, name='userList'),
-   url(r'^authors/$', views.authorList, name='authorList'),
-   url(r'^authors/(?P<int:author_id>)/stories$', views.storiesByAuthor, name='storiesByAuthor'),
-   url(r'^stories/(?P<int:story_id>)/acts$', views.actsByStory, name='actsByStory'),
-   url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
-        'document_root': settings.MEDIA_ROOT})
+    url(r'^authors/(?P<int:author_id>)/stories$', views.storiesByAuthor, name='storiesByAuthor'),
+    url(r'^stories/(?P<int:story_id>)/acts$', views.actsByStory, name='actsByStory'),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+        'document_root': settings.MEDIA_ROOT}),
+    url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^stories/$', views.storyList, name='storyList'),
+    url(r'^users/$', views.userList, name='userList'),
+    url(r'^authors/$', views.authorList, name='authorList'),
+    url(r'^$', views.index, name='index'),
 
 ]
