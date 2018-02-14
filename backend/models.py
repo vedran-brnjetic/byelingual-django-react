@@ -11,7 +11,7 @@ class Story(models.Model):
     name = models.CharField(max_length=150)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='story_images',blank=True)
-    author = models.ForeignKey(Player, on_delete=models.CASCADE)
+    author = models.ForeignKey('Player', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
