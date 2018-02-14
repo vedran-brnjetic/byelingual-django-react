@@ -45,13 +45,17 @@ class Act(models.Model):
     cover_image = models.ImageField(upload_to=author_story_directory_path, blank=True)
     main_language = models.CharField(max_length=3)
     foreign_language = models.CharField(max_length=3)
-    soundtrack = models.FileField(upload_to='stories/soundtracks')
+    soundtrack = models.FileField(upload_to=author_story_directory_path, blank=True)
     story = models.OneToManyField( Story, on_delete=models.CASCADE)
 
 def __str__(self):
     return self.title
 
-class Scene(models.Model):
+class Location(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True)
-    background_image = models.ImageField(blank=True)
+    background_image = models.ImageField(upload_to=author_story_directory_path, blank=True)
+    act = models.OneToManyField(Act, on_delete=models.CASCADE)
+
+def __str__(self):
+    return self.title
