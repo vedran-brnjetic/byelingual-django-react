@@ -26,9 +26,9 @@ urlpatterns = [
    url(r'^stories/$', views.storyList, name='storyList'),
    url(r'^users/$', views.userList, name='userList'),
    url(r'^authors/$', views.authorList, name='authorList'),
-   url(r'^authors/<int:author_id>/stories$', views.storiesByAuthor, name='storiesByAuthor'),
-   url(r'^stories/<int:story_id>/acts/$', views.actsByStory, name='actsByStory'),
-url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+   url(r'^authors/(?P<int:author_id>)/stories$', views.storiesByAuthor, name='storiesByAuthor'),
+   url(r'^stories/(?P<int:story_id>)/acts$', views.actsByStory, name='actsByStory'),
+   url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
         'document_root': settings.MEDIA_ROOT})
 
 ]
