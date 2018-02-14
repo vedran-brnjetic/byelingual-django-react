@@ -11,7 +11,7 @@ class Story(models.Model):
     name = models.CharField(max_length=150)
     description = models.TextField(blank=True)
     image = models.ImageField(upload_to='story_images',blank=True)
-    author = models.OneToManyField(Player, on_delete=models.CASCADE)
+    author = models.ForeignKey(Player, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
@@ -27,6 +27,9 @@ class Player(models.Model):
     isAuthor = models.BooleanField(default=False)
     authorBiography = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.public_name
+
 @receiver(post_save, sender=User)
 def create_player_profile(sender, instance, created, **kwargs):
     if created:
@@ -36,8 +39,6 @@ def create_player_profile(sender, instance, created, **kwargs):
 def save_player_profile(sender, instance, **kwargs):
     instance.player.save
 
-def __str__(self):
-    return self.public_name
 
 class Act(models.Model):
     title = models.CharField(max_length=50)
@@ -46,16 +47,16 @@ class Act(models.Model):
     main_language = models.CharField(max_length=3)
     foreign_language = models.CharField(max_length=3)
     soundtrack = models.FileField(upload_to=author_story_directory_path, blank=True)
-    story = models.OneToManyField( Story, on_delete=models.CASCADE)
+    story = models.ForeignKey( Story, on_delete=models.CASCADE)
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
 class Location(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True)
     background_image = models.ImageField(upload_to=author_story_directory_path, blank=True)
-    act = models.OneToManyField(Act, on_delete=models.CASCADE)
+    act = models.ForeignKey(Act, on_delete=models.CASCADE)
 
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
